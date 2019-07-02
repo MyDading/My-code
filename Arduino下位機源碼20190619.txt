@@ -1,0 +1,59 @@
+﻿ #include "Max6675.h"
+int Adresspin1[] = {2,3,4,5}; 
+int Adresspin2[] = {9,10,11,12}; 
+Max6675 t1(6, Adresspin1, 7);
+Max6675 t2(A0, Adresspin2, A1);//依次定义SO、CS、CSK所连接的引脚号
+void setup()
+{
+  t1.setOffset(0);               //设置温度偏移量
+  t2.setOffset(0);  
+  Serial.begin(9600);
+      for (int i=0 ; i<4 ;i++)
+     {
+       pinMode(Adresspin1[i],OUTPUT);
+       pinMode(Adresspin2[i],OUTPUT);
+     }  
+}
+
+void deal(unsigned char value)
+{  
+   for (int i=0 ; i<4 ;i++)
+   {
+    digitalWrite(Adresspin1[i],bitRead(value,i));
+    digitalWrite(Adresspin2[i],bitRead(value,i));
+   delay(5);
+   }
+}
+
+void loop()
+{
+    
+      for (int c=0; c<16; c++) 
+        {
+           String b = "0";
+           String z = "0";
+           String w = "#";
+           
+           deal(c);
+           c=2*c+1;
+              if(c<10)
+              Serial.print(z = w + b + c);
+              else
+              Serial.print(w + c);
+              Serial.println(t1.getCelsius(), 2);  //获取摄氏温度，并通过串口发送
+              //Serial.println ('@') ;
+          delay(940);
+          c++;
+               if(c<10)
+               Serial.print(z = w + b + c );      
+               else
+               Serial.print(w + c);
+               Serial.println(t2.getCelsius(), 2); 
+               //Serial.println ('@') ;
+          delay(940);
+          c=c-2;
+          c=c/2;
+          }
+}
+
+    

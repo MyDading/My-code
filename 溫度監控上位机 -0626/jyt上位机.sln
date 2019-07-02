@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jyt上位机", "jyt上位机\jyt上位机.csproj", "{D06D4276-C139-4968-9E79-22FDFE17FE1A}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "temperature monitoring", "temperature monitoring\temperature monitoring.vdproj", "{C11AFFA1-A05D-4521-A638-88E0760C3F3E}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "temperture monitoring V1.0.0", "temperture monitoring V1.0.0\temperture monitoring V1.0.0.vdproj", "{483CB9AF-6025-4449-99B0-6258B81ABE31}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D06D4276-C139-4968-9E79-22FDFE17FE1A}.Debug|x86.ActiveCfg = Debug|x86
+		{D06D4276-C139-4968-9E79-22FDFE17FE1A}.Debug|x86.Build.0 = Debug|x86
+		{D06D4276-C139-4968-9E79-22FDFE17FE1A}.Release|x86.ActiveCfg = Release|x86
+		{D06D4276-C139-4968-9E79-22FDFE17FE1A}.Release|x86.Build.0 = Release|x86
+		{C11AFFA1-A05D-4521-A638-88E0760C3F3E}.Debug|x86.ActiveCfg = Debug
+		{C11AFFA1-A05D-4521-A638-88E0760C3F3E}.Release|x86.ActiveCfg = Release
+		{483CB9AF-6025-4449-99B0-6258B81ABE31}.Debug|x86.ActiveCfg = Debug
+		{483CB9AF-6025-4449-99B0-6258B81ABE31}.Release|x86.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2CB17708-9DE7-411A-B337-3F392903A33A}
+	EndGlobalSection
+EndGlobal
